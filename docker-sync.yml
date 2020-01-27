@@ -1,0 +1,10 @@
+version: '2'
+
+options:
+  project_root: config_path
+  verbose: true
+
+syncs:
+  app-sync:
+    src: .
+    sync_strategy: unison

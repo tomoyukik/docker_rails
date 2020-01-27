@@ -1,0 +1,23 @@
+version: '3.7'
+
+services:
+  app:
+    container_name: myapp
+    build: .
+    image: rails:6
+    working_dir: /app
+    environment:
+      RAILS_ENV: development
+      BUNDLE_PATH: vendor/bundle
+    volumes:
+      - .:/app
+    ports:
+      - 3005:3000
+    depends_on:
+      - db
+    command: 'bundle exec rails server -b 0.0.0.0'
+  db:
+    container_name: app_db
+    image: postgres
+    volumes:
+      - ./postgres:/var/lib/postgresql/data

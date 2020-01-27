@@ -1,0 +1,11 @@
+/.dockerignore
+/.git
+/.gitattributes
+/.gitignore
+/.ruby-version
+/Dockerfile
+/docker-compose-dev.yml
+/docker-compose.yml
+/docker-sync.yml
+/.rubocop.yml
+/postgres

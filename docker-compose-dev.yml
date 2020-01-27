@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  app:
+    volumes:
+      - app:/app
+
+volumes:
+  app:
+    name: app-sync
+    external: true
